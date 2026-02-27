@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Bineesh V - Assistant Professor</title>
     <style>
         * {
             margin: 0;
@@ -11,51 +11,60 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #2c3e50;
+            background: #f8f9fa;
         }
 
         /* Header & Navbar */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 0;
+            background: white;
+            color: #2c3e50;
+            padding: 1.2rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a73e8;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .nav-links a {
-            color: white;
+            color: #656565;
             text-decoration: none;
-            transition: opacity 0.3s;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            color: #1a73e8;
         }
 
         .hamburger {
@@ -66,227 +75,302 @@
 
         .hamburger span {
             width: 25px;
-            height: 3px;
-            background: white;
+            height: 2.5px;
+            background: #2c3e50;
             margin: 5px 0;
             transition: 0.3s;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
             color: white;
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
-            min-height: 500px;
+            min-height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
+        .hero-content .title {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        .hero-content .location {
+            font-size: 1rem;
             margin-bottom: 2rem;
+            opacity: 0.85;
         }
 
         .cta-button {
             background: white;
-            color: #667eea;
-            padding: 0.8rem 2rem;
+            color: #1a73e8;
+            padding: 0.85rem 2.2rem;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.3s;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
+            background: #f0f4ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,255,255,0.3);
         }
 
         /* Main Content */
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 2rem;
         }
 
         section {
-            margin: 3rem 0;
+            margin: 4rem 0;
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: #1a73e8;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a73e8, #4285f4);
+            border-radius: 2px;
         }
 
         /* About Section */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
         }
 
         .about-text p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.3rem;
             line-height: 1.8;
+            color: #444;
+            font-size: 0.98rem;
         }
 
-        .about-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .about-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .info-box {
+            padding: 1.2rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #1a73e8;
+        }
+
+        .info-box h4 {
+            color: #1a73e8;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-box p {
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+        }
+
+        .experience-header h3 {
+            color: #1a73e8;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .experience-duration {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-org {
+            color: #656565;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .experience-desc {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 0.8rem;
         }
 
         /* Skills Section */
-        .skills-grid {
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.2rem;
         }
 
-        .skill-card {
-            background: #f4f4f4;
-            padding: 2rem;
-            border-radius: 8px;
+        .skill-tag {
+            background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 100%);
+            color: #1a73e8;
+            padding: 0.9rem 1.4rem;
+            border-radius: 6px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid #d2e3fc;
+            transition: all 0.3s ease;
+            cursor: default;
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #d2e3fc 0%, #e8f0fe 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.15);
         }
 
-        .skill-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
+        /* Education Section */
+        .education-item {
+            margin-bottom: 2rem;
         }
 
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+        .education-item:last-child {
+            margin-bottom: 0;
         }
 
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+        .education-item h3 {
+            color: #1a73e8;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            object-fit: cover;
-        }
-
-        .project-info {
-            padding: 1.5rem;
-        }
-
-        .project-info h3 {
-            color: #667eea;
+        .education-item .university {
+            color: #656565;
+            font-size: 0.95rem;
             margin-bottom: 0.5rem;
         }
 
-        .project-info p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        .project-link {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
+        .education-item .year {
+            color: #999;
+            font-size: 0.9rem;
+            font-style: italic;
         }
 
         /* Contact Section */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .contact-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
+        .contact-item:hover {
+            background: #e8f0fe;
+            transform: translateY(-2px);
         }
 
-        input, textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: inherit;
+        .contact-item h3 {
+            color: #1a73e8;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.7rem;
         }
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        .contact-item a, .contact-item p {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .submit-btn {
-            background: #667eea;
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #764ba2;
+        .contact-item a:hover {
+            color: #1a73e8;
         }
 
         /* Footer */
         footer {
-            background: #333;
+            background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-top: 3rem;
+            font-size: 0.9rem;
         }
 
-        .social-links {
-            margin-bottom: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #667eea;
+        footer p {
+            opacity: 0.85;
         }
 
         /* Responsive Design */
@@ -298,14 +382,15 @@
             .nav-links {
                 display: none;
                 position: absolute;
-                top: 70px;
+                top: 65px;
                 right: 0;
-                background: #667eea;
+                background: white;
                 flex-direction: column;
                 width: 100%;
-                text-align: center;
-                padding: 2rem 0;
-                gap: 0;
+                text-align: left;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             }
 
             .nav-links.active {
@@ -313,27 +398,40 @@
             }
 
             .nav-links a {
-                padding: 1rem 0;
+                padding: 0.7rem 0;
             }
 
             .hero-content h1 {
                 font-size: 2rem;
             }
 
+            .hero-content .title {
+                font-size: 1.1rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
             }
 
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .projects-grid {
+            .about-highlight {
                 grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 2rem 1.5rem;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
             }
         }
 
@@ -343,15 +441,32 @@
             }
 
             .logo {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+                min-height: 400px;
             }
 
             .hero-content h1 {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
-            .hero-content p {
+            .hero-content .title {
                 font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem 1rem;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -360,12 +475,13 @@
     <!-- Header & Navigation -->
     <header>
         <nav>
-            <div class="logo">Portfolio</div>
+            <div class="logo">BINEESH V</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -379,8 +495,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Full Stack Developer | Creative Designer</p>
+            <h1>Bineesh V</h1>
+            <p class="title">Assistant Professor</p>
+            <p class="location">Computer Science & Engineering | Kerala, India</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
@@ -389,100 +506,104 @@
     <div class="container">
         <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
+            <h2>About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Hi! I'm a passionate developer with experience in building responsive web applications. I love turning ideas into reality with clean, efficient code.</p>
-                    <p>With expertise in HTML, CSS, JavaScript, and modern frameworks, I create engaging digital experiences that solve real-world problems.</p>
-                    <p>When I'm not coding, I'm learning new technologies and exploring creative design trends.</p>
+                    <p>I am an experienced Assistant Professor with over 13 years of expertise in Computer Science and Engineering education. Dedicated to fostering academic excellence and knowledge advancement through innovative teaching methodologies and research-oriented approaches.</p>
+                    <p>With a strong foundation in computer science fundamentals and emerging technologies, I am committed to mentoring the next generation of engineers and contributing to academic institutions and the technology sector.</p>
+                    <div class="about-highlight">
+                        <div class="info-box">
+                            <h4>Experience</h4>
+                            <p>13+ Years in Academia</p>
+                        </div>
+                        <div class="info-box">
+                            <h4>Expertise</h4>
+                            <p>Computer Science & Engineering</p>
+                        </div>
+                    </div>
                 </div>
-                <img src="https://via.placeholder.com/300" alt="Profile" class="about-image">
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Assistant Professor</h3>
+                    <span class="experience-duration">13+ Years</span>
+                </div>
+                <p class="experience-org">MEA Engineering College, Chemmaniyode</p>
+                <p class="experience-org-location">Perinthalmanna, Kerala, India</p>
+                <p class="experience-org-location">June 2012 - Present</p>
+                <p class="experience-desc">
+                    Working in the Computer Science and Engineering Department with a focus on delivering quality education, conducting research, and contributing to academic advancements. Responsible for designing and delivering courses, mentoring students, and fostering technical excellence.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Assistant Professor</h3>
+                    <span class="experience-duration">1 Year</span>
+                </div>
+                <p class="experience-org">AWH Engineering College, Kuttikkattoor</p>
+                <p class="experience-org-location">Kerala, India</p>
+                <p class="experience-org-location">June 2011 - May 2012</p>
+                <p class="experience-desc">
+                    Served in the Computer Science department, contributing to curriculum development and student mentorship programs.
+                </p>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>HTML & CSS</h3>
-                    <p>Responsive design and modern layouts</p>
-                </div>
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <p>Dynamic interactions and functionality</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Web Design</h3>
-                    <p>UI/UX and visual design principles</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Problem Solving</h3>
-                    <p>Analytical thinking and debugging</p>
-                </div>
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-tag">C Programming</div>
+                <div class="skill-tag">Linux/Unix</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">Data Structures</div>
+                <div class="skill-tag">Algorithms</div>
+                <div class="skill-tag">DBMS</div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <h3>Project One</h3>
-                        <p>Description of your first project and technologies used.</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <h3>Project Two</h3>
-                        <p>Description of your second project and technologies used.</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <div class="project-info">
-                        <h3>Project Three</h3>
-                        <p>Description of your third project and technologies used.</p>
-                        <a href="#" class="project-link">View Project →</a>
-                    </div>
-                </div>
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Master of Technology (M.Tech.)</h3>
+                <p class="university">Cochin University of Science and Technology</p>
+                <p class="year">2009 - 2011</p>
+                <p class="education-item">Specialization: Computer Science</p>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>Contact Me</h2>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" required>
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:bineeshv84@gmail.com">bineeshv84@gmail.com</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/bineeshv" target="_blank">linkedin.com/in/bineeshv</a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="5" required></textarea>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Kerala, India</p>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            </div>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-        </div>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 Bineesh V. All rights reserved. | Assistant Professor, MEA Engineering College</p>
     </footer>
 
     <script>
@@ -500,13 +621,6 @@
                 navLinks.classList.remove('active');
             });
         });
-
-        // Form Submission
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            event.target.reset();
-        }
 
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(link => {
